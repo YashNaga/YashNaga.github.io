@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>will you be mi valentines</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f9e3e3;
+            font-family: "Arial", sans-serif;
+            flex-direction: column;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #d32f2f;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        .yes-button {
+            font-size: 1.5em;
+            padding: 10px 20px;
+            margin-right: 10px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .no-button {
+            font-size: 1.5em;
+            padding: 10px 20px;
+            margin-right: 10px;
+            background-color: #f44336;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .image-container img {
+           max-width: 480px;
+           height: 360px;
+           border-radius: 10px;
+           margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+         <div class="image-container">
+            <img src="images/mi.jpg" alt"mi valentine">
+        </div>
+        <h1>be mi valentine?</h1>
+        <div class="buttons">
+            <button class="yes-button" onclick="handleYesClick()">Yes</button>
+            <button class="no-button" onclick="handleNoClick()">No</button>
+        </div>
+    </div>
+
+    <script>
+        function handleNoClick() {
+            const yesButton = document.querySelector('.yes-button');
+            const currentSize = parseFloat(window.getComputedStyle(yesButton).fontSize);
+            yesButton.style.fontSize = `${currentSize * 1.5}px`;
+        }
+        function handleYesClick() {
+            window.location.href = "yes.html"
+        }
+    </script>
+</body>
+</html>
